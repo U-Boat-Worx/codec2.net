@@ -18,7 +18,7 @@ namespace test
             byte[] bits;
             
             buf = new byte[c2.samplesPerFrame * sizeof(short)];
-            bits = new byte[c2.bitsPerFrame];
+            bits = new byte[c2.bytesPerFrame];
 
             FileStream readfile = File.OpenRead(filePath);
             FileStream writeFile = File.OpenWrite("out3200");

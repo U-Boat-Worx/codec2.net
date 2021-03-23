@@ -226,7 +226,7 @@ public class Codec2
     /// <param name="encodedInput">encoded data to decode</param>
     public void decodeFrame(ref byte[] rawAudioFrameOutput, byte[] encodedInput)
     {
-        short[] outbuf_s = new short[rawAudioFrameOutput.Length / 2];
+        short[] outbuf_s = new short[samplesPerFrame];
         decodeFrame(ref outbuf_s, encodedInput);
         rawAudioFrameOutput = ShortsToBytes(outbuf_s);
     }
@@ -238,7 +238,7 @@ public class Codec2
     /// <returns>raw audio bytearray</returns>
     public byte[] decodeFrame(byte[] encodedInput)
     {
-        byte[] buffer = new byte[bytesPerFrame];
+        byte[] buffer = new byte[samplesPerFrame * sizeof(short)];
         decodeFrame(ref buffer, encodedInput);
         return buffer;
     }
