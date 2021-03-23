@@ -2,8 +2,20 @@
 
   <PropertyGroup>
     <RootNamespace>codec2</RootNamespace>
-	<OutputType>Library</OutputType>
-	<TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <PackageId>Codec2</PackageId>
+    <Version>0.0.2</Version>
+    <Authors>Noeël Moeskops</Authors>
+    <Company>U-Boat Worx B.V.</Company>
+
+    <PackageProjectUrl>https://github.com/U-Boat-Worx/codec2.net</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/U-Boat-Worx/codec2.net/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/U-Boat-Worx/codec2.net.git</RepositoryUrl>
+
   </PropertyGroup>
   <ItemGroup>
     <Content Include="libcodec2.dll">

@@ -20,7 +20,7 @@ public class Codec2
         b450PWB = 11,
     }
 
-
+    // TODO use lib folder for specific architecture and OS for dll/so, https://docs.microsoft.com/en-us/nuget/create-packages/supporting-multiple-target-frameworks
     [DllImport("libcodec2")]
     private static extern IntPtr codec2_create(int mode);
 
