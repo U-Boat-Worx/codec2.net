@@ -21,6 +21,7 @@ public class Codec2
     }
 
     // TODO use lib folder for specific architecture and OS for dll/so, https://docs.microsoft.com/en-us/nuget/create-packages/supporting-multiple-target-frameworks
+    // https://dev.to/jeikabu/nupkg-containing-native-libraries-1576
     [DllImport("libcodec2")]
     private static extern IntPtr codec2_create(int mode);
 

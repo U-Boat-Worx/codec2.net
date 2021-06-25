@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
     <PackageId>Codec2</PackageId>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Authors>Noeël Moeskops</Authors>
     <Company>U-Boat Worx B.V.</Company>
 
@@ -16,16 +16,12 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/U-Boat-Worx/codec2.net.git</RepositoryUrl>
 
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="libcodec2.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="libcodec2.so">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+ <ItemGroup>
+    <Content Include="runtimes\**" PackagePath="runtimes" Visible="false" />
   </ItemGroup>
 
 </Project>
